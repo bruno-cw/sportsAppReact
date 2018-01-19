@@ -1,0 +1,8 @@
+/dist/
+/node_modules/
+/news_temp/
+/testresults/
+npm-debug.log
+*.bak
+/.vscode
+debug.log

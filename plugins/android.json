@@ -1,0 +1,46 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-battery-status": {
+      "PACKAGE_NAME": "com.brunocw.airsoft"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.brunocw.airsoft"
+    },
+    "cordova-plugin-media-capture": {
+      "PACKAGE_NAME": "com.brunocw.airsoft"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.brunocw.airsoft"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "com.brunocw.airsoft"
+    },
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "com.brunocw.airsoft"
+    },
+    "cordova-plugin-globalization": {
+      "PACKAGE_NAME": "com.brunocw.airsoft"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.brunocw.airsoft"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.brunocw.airsoft"
+    },
+    "cordova-plugin-vibration": {
+      "PACKAGE_NAME": "com.brunocw.airsoft"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.brunocw.airsoft"
+    }
+  }
+}
