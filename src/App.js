@@ -5,7 +5,8 @@ import axios from 'axios';
 
 class App extends Component {
 	state = {
-  	cards : []
+    cards : [],
+    error: ''
   }
   addNewCard = (cardInfo) => {
   	this.setState(prevState => ({
@@ -21,7 +22,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
           <div>
-    		    <Form onSubmit={this.addNewCard}/>
+    		    <Form onSubmit={this.addNewCard} error={this.state.error}/>
       	    <CardList cards={this.state.cards} />
     	    </div>
       </div>
@@ -50,14 +51,23 @@ const CardList = (props) =>{
 }
 
 class Form extends React.Component {
-	state = { userName: '' }
+  state = { userName: '',
+            error : '' }
 	handleSubmit = (event) => {
-  	event.preventDefault();
-    axios.get(`https://api.github.com/users/${this.state.userName}`)
-    	.then (resp =>{
-      	this.props.onSubmit(resp.data);
-        this.setState({userName : ''})
+    try{
+      event.preventDefault();
+      axios.get(`https://api.github.com/users/${this.state.userName}`)
+        .then (resp =>{
+          this.props.onSubmit(resp.data);
+          this.setState({userName : ''})
+          this.setState({error : 'none'})
+        })
+        .catch(error => {
+          this.setState({error : error.toString() })
       });
+    } catch (error){
+      this.setState({error : error})
+    }
   }
 	render(){
   	return (
@@ -67,6 +77,7 @@ class Form extends React.Component {
           onChange={(event) => this.setState({ userName: event.target.value})}
         	placeholder="Github username" required />
         <button type="submit">Add card</button>
+        <p>{this.state.error}</p>
     	</form>
     )
   }
