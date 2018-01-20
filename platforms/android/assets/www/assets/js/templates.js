@@ -1,1 +1,0 @@
-angular.module('sportsApp').run(['$templateCache', function($templateCache) {$templateCache.put('sections/login/login.tpl.html','<div>\r\n\r\n  <p>{{lg.message}}</p>\r\n  <p>{{lg.serviceMessage}}</p>\r\n</div>');}]);

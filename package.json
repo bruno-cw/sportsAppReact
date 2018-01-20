@@ -5,8 +5,9 @@
   "main": "www/index.html",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && copyfiles -u 1 build/**/* www",
-    "test": "react-scripts test --env=jsdom"
+    "build": "react-scripts build && copyfiles -u 1 build/**/* www && phonegap build android",
+    "test": "react-scripts test --env=jsdom",
+    "eject" : "react-scripts eject"
   },
   "author": "bruno-cw",
   "license": "ISC",
