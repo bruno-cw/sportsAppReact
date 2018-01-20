@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.brunocw.airsoft" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Sports App 2</name>
+    <name>Sports App</name>
     <description>
-        Sports App 2 
+        Sports App
     </description>
     <author email="bruno.costenaro.w@gmail.com" href="http://phonegap.com">
         Bruno C
